@@ -8,8 +8,12 @@ const TodoList = () => {
 
 
   return (
-      <div>This is the TodoList Component.</div>
-  );
+      <div>
+          <div>This is the TodoList Component.</div>
+          <TodoListGroup todoList={state}/>
+          <TodoGenerator dispatch={dispatch}/>
+      </div>
+  )
 }
 
 export default TodoList

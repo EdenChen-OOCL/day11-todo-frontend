@@ -4,5 +4,11 @@ export const initialState = [
 ];
 
 export const todoReducer = (state, action) => {
-  return state;
+  const {eventType, payload} = action;
+  switch (eventType) {
+    case "ADD":
+      return [...state, {id: Date.now(), text: payload, done: false}];
+    default:
+        return state;
+  }
 };
