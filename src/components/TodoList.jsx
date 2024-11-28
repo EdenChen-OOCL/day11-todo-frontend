@@ -9,7 +9,7 @@ const TodoList = () => {
 
   return (
       <div>
-          <div>This is the TodoList Component.</div>
+          <h1>Todo List</h1>
           <TodoListGroup todoList={state}/>
           <TodoGenerator dispatch={dispatch}/>
       </div>
