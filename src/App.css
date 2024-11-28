@@ -1,3 +1,26 @@
 .App {
   text-align: center;
 }
+
+input {
+  padding: 8px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+span {
+  display: inline-block;
+  border: black 1px solid;
+  padding: 8px;
+  width: 3px;
+  max-width: 40%;
+  margin-right: 15px;
+  font-size: 1.65em;
+}

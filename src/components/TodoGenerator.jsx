@@ -16,7 +16,7 @@ const TodoGenerator = () => {
     return (
         <div>
             <input value={todoText} onChange={typeTodoText}/>
-            <button onClick={addTodoItem}>add</button>
+            <button onClick={addTodoItem} style={{color:"white", backgroundColor:"rgb(65,159,255)", border:"hidden"}}>add</button>
         </div>
     );
 }

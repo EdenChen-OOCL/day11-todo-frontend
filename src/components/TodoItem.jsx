@@ -13,7 +13,7 @@ const TodoItem = ({todoItem}) => {
     };
 
     return (
-        <div>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center"}}>
             <span
                 onClick={toggleDone}
                 style={{
@@ -24,7 +24,7 @@ const TodoItem = ({todoItem}) => {
             >
                 {todoItem.text}
             </span>
-            <button onClick={deleteItem}>X</button>
+            <button onClick={deleteItem} style={{color:"red"}}>X</button>
         </div>
     );
 }
