@@ -6,7 +6,6 @@ import TodoGenerator from "./TodoGenerator";
 const TodoList = () => {
   const {state, dispatch} = useContext(TodoContext);
 
-
   return (
       <div>
           <h1>Todo List</h1>
