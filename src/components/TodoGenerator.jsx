@@ -11,6 +11,9 @@ const TodoGenerator = () => {
     };
 
     const addTodoItem = () => {
+        if(todoText.trim() === "") {
+            return;
+        }
         dispatch({eventType:"ADD", payload:todoText});
     };
     return (
