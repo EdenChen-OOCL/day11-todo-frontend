@@ -6,7 +6,6 @@ export const todoReducer = (state, action) => {
     case "ADD":
       return [...state, {id: Date.now(), text: payload, done: false}];
     case "DELETE":
-      console.log("delete: ", payload);
       return state.filter((todo) => todo.id !== payload);
     case "TOGGLE_DONE":
       return state.map((todo) =>
