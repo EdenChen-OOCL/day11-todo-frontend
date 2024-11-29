@@ -1,11 +1,13 @@
 export const initialState = [
-  {id: Date.now(), text: "the first todo", done: false},
-  {id: Date.now(), text: "the second todo", done: true},
+  // {id: Date.now(), text: "the first todo", done: false},
+  // {id: Date.now(), text: "the second todo", done: true},
 ];
 
 export const todoReducer = (state, action) => {
   const {eventType, payload} = action;
   switch (eventType) {
+    case "INIT":
+      return payload;
     case "ADD":
       return [...state, {id: Date.now(), text: payload, done: false}];
     case "DELETE":
