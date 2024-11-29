@@ -14,7 +14,7 @@ const TodoItem = ({todoItem}) => {
 
     return (
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center"}}>
-            <span
+            <span class={"todo-item"}
                 onClick={toggleDone}
                 style={{
                     textDecoration: todoItem.done ? "line-through" : "none",

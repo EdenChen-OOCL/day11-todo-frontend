@@ -14,3 +14,8 @@ export const createTodoItem = async (newTodoItem) => {
     const response = await instance.post("/todoItem", newTodoItem);
     return response.data;
 }
+
+export const updateTodoItem = async (updatedTodoItem) => {
+    const response = await instance.put(`/todoItem/${updatedTodoItem.id}`, updatedTodoItem);
+    return response.data;
+}

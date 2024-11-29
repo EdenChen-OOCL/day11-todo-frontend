@@ -15,7 +15,7 @@ div {
   margin-bottom: 10px;
 }
 
-span {
+.todo-item{
   display: inline-block;
   border: black 1px solid;
   padding: 8px;
