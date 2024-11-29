@@ -17,7 +17,7 @@ function App() {
       <TodoContext.Provider value={{ state, dispatch }}>
           <Router>
             <nav>
-                <Link to={'/todo-list'}>Todo List</Link>
+                {/*<Link to={'/todo-list'}>Todo List</Link>*/}
 
             </nav>
             <Routes>
