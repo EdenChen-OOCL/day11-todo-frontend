@@ -1,5 +1,6 @@
 import {useContext, useState} from "react";
 import {TodoContext} from "../App";
+import {createTodoItem} from "../api/TodoApi";
 
 const TodoGenerator = () => {
     const {dispatch} = useContext(TodoContext);
@@ -10,11 +11,18 @@ const TodoGenerator = () => {
         setTodoText(event.target.value);
     };
 
-    const addTodoItem = () => {
+    const addTodoItem = async () => {
         if(todoText.trim() === "") {
             return;
         }
-        dispatch({eventType:"ADD", payload:todoText});
+
+        let newTodoItem = {
+            "text": todoText,
+            "done": false,
+        };
+        const response = await createTodoItem(newTodoItem);
+
+        dispatch({eventType:"ADD", payload: response});
     };
     return (
         <div>
