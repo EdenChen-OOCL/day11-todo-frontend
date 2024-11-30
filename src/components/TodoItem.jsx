@@ -1,12 +1,13 @@
 import {useContext} from "react";
 import {TodoContext} from "../App";
-import {updateTodoItem} from "../api/TodoApi";
+import {deleteTodoItem, updateTodoItem} from "../api/TodoApi";
 
 const TodoItem = ({todoItem}) => {
     const {dispatch} = useContext(TodoContext);
 
-    const deleteItem = () => {
-        dispatch({eventType: "DELETE", payload: todoItem.id});
+    const deleteItem = async () => {
+        const response = await deleteTodoItem(todoItem.id);
+        dispatch({eventType: "DELETE", payload: response.id});
     };
 
     const toggleDone = async () => {
