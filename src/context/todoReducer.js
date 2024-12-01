@@ -9,6 +9,7 @@ export const todoReducer = (state, action) => {
   const {eventType, payload} = action;
   switch (eventType) {
     case "INIT":
+    case "PAGE":
       return payload;
     case "ADD":
       return [...state, payload];
