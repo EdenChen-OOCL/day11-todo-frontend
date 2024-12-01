@@ -1,42 +1,43 @@
-import React, { createContext, useReducer } from "react";
+import React, {createContext, useReducer} from "react";
 import './App.css';
 import TodoList from "./components/TodoList";
-import { initialState, todoReducer } from "./context/todoReducer";
-import {BrowserRouter as Router, Link, Navigate, Route, Routes} from "react-router-dom";
+import {initialState, todoReducer} from "./context/todoReducer";
+import {
+    BrowserRouter as Router,
+    Navigate,
+    Route,
+    Routes
+} from "react-router-dom"; // 引入 useNavigate
 import NotFound from "./components/NotFound";
 import DoneList from "./components/DoneList";
 import {HelpPage} from "./components/HelpPage";
+import {NavigationTags} from "./components/NavigationTags";
 
 export const TodoContext = createContext();
 
 function App() {
-  const [state, dispatch] = useReducer(todoReducer, initialState);
+    const [state, dispatch] = useReducer(todoReducer, initialState);
 
-  return (
-    <div className="App">
+    return (
+        <div className="App">
 
-      <TodoContext.Provider value={{ state, dispatch }}>
-          <Router>
-            <nav>
-                <Link to={'/todo-list'}> Todo List </Link>
-                |
-                <Link to={'/done-list'}> Done List </Link>
-                |
-                <Link to={'/help'}> Help </Link>
-
-            </nav>
-            <Routes>
-
-                <Route path={'/'} element={<Navigate to={'/todo-list'}/>}/>
-                <Route path={'/todo-list'} element={<TodoList/>}></Route>
-                <Route path={'/done-list'} element={<DoneList/>}></Route>
-                <Route path={'/help'} element={<HelpPage/>}></Route>
-                <Route path={'*'} element={<NotFound/>}></Route>
-            </Routes>
-          </Router>
-      </TodoContext.Provider>
-    </div>
-  );
+            <TodoContext.Provider value={{state, dispatch}}>
+                <Router>
+                    <NavigationTags/>
+                    <Routes>
+                        <Route path={'/'}
+                               element={<Navigate to={'/todo-list'}/>}/>
+                        <Route path={'/todo-list'}
+                               element={<TodoList/>}></Route>
+                        <Route path={'/done-list'}
+                               element={<DoneList/>}></Route>
+                        <Route path={'/help'} element={<HelpPage/>}></Route>
+                        <Route path={'*'} element={<NotFound/>}></Route>
+                    </Routes>
+                </Router>
+            </TodoContext.Provider>
+        </div>
+    );
 }
 
 export default App;
