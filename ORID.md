@@ -1,11 +1,8 @@
-Objective: Today, I learned how to manage global state in React using useContext.
+Objective: Today, I learned about React's routing mechanism and completed an exercise that covered various React concepts.
 
-Reflective: This was the first time this week I was able to keep up with the pace of the class.
-        I felt a great sense of achievement because it marked a significant progress in my learning journey.
+Reflective: I'm really happy because I've gained a deeper understanding of React.
 
-Interpretive: I realized that the key to becoming more efficient in React programming lies in thoroughly 
-        understanding and memorizing the functionalities, parameters, and return values of the APIs. 
-        This deep approach to learning helps me grasp the technology faster and keep up with the class pace better.
+Interpretive: Now, I know how to write a complete React project and understand 
+        how to fetch data from a backend server and render it into components.
 
-Decisional: To further enhance my React skills, I plan to continue studying more APIs and strengthen my practical experience by writing actual code. 
-        Also, I will keep up with the course to ensure I can timely absorb and apply new knowledge.
+Decisional: Moving forward, I should look at more excellent projects online to continue accumulating practical engineering experience.
