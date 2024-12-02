@@ -19,7 +19,7 @@ const TodoItem = ({todoItem}) => {
     }
 
     const handleOk = () => {
-        const payload = {id: todoItem.id, text: tempText};
+        const payload = {...todoItem, text: tempText};
         editTodoItem(payload).then((response) => {
             dispatch({eventType: "EDIT", payload: response});
         }).finally(() => {
